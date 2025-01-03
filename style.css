@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DotGothic16&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Afacad Flux", sans-serif;
+}
+
+:root {
+  --body-background-color: hsl(0, 100%, 74%);
+  --into-text-color: hsl(0, 0%, 100%);
+  --offer-button-color: hsl(248, 32%, 49%);
+  --input-form-color: hsl(0, 0%, 100%);
+  --input-text-color: hsl(249, 10%, 26%);
+  --input-border-color: hsla(249, 10%, 26%, 0.201);
+  --form-button-color: hsl(154, 59%, 51%);
+  --form-terms-color: hsl(246, 25%, 77%);
+  --box-shadow-color: hsla(0, 0%, 0%, 0.15);
+  --form-button-shadow-color: hsla(154, 59%, 37%, 0.712);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: var(--body-background-color);
+}
+
+.signup {
+  min-width: 375px;
+
+  @media (min-width: 1440px) {
+    display: flex;
+  }
+
+  .signup__intro {
+    text-align: center;
+    color: var(--into-text-color);
+    margin: 90px 30px 60px 30px;
+
+    @media (min-width: 1440px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: start;
+    }
+
+    .signup__title {
+      font-size: 35px;
+      margin-bottom: 20px;
+      line-height: 100%;
+
+      @media (min-width: 1440px) {
+        font-size: 55px;
+      }
+    }
+
+    .signup__description {
+      font-weight: 400;
+      line-height: 180%;
+
+      @media (min-width: 1440px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .signup__offer {
+    background-color: var(--offer-button-color);
+    margin: 30px;
+    padding: 20px 70px;
+    border-radius: 10px;
+    box-shadow: 0 8px 0 var(--box-shadow-color);
+    cursor: pointer;
+
+    @media (min-width: 1440px) {
+      min-width: 500px;
+      margin-top: 100px;
+    }
+
+    .signup__offer-detail {
+      font-weight: 700;
+      text-align: center;
+      color: hsl(0, 0%, 100%);
+
+      .signup__offer-detail_span {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .signup__form {
+    background-color: var(--input-form-color);
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 0 var(--box-shadow-color);
+
+    @media (min-width: 1440px) {
+      padding: 35px;
+    }
+
+    .form__group {
+      /* position: relative; */
+      width: 100%;
+
+      .form__input {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--input-text-color);
+        margin-top: 15px;
+        padding: 13px;
+        border-radius: 5px;
+        border: 1px solid var(--input-border-color);
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+
+    .form__button {
+      background-color: var(--form-button-color);
+      color: var(--into-text-color);
+      border: none;
+      padding: 13px;
+      border-radius: 5px;
+      box-shadow: 0 3px 0 var(--form-button-shadow-color);
+      font-size: 17px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .form__terms {
+      font-size: 13px;
+      color: var(--form-terms-color);
+      margin: 20px;
+      text-align: center;
+
+      .form__terms-link {
+        text-decoration: none;
+        color: var(--body-background-color);
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
